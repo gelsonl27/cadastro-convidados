@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de Convidados para Evento</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cadastro de Convidado para Evento</h1>
+            <p>Por favor, preencha as informações abaixo para realizar o cadastro do convite para o evento.</p>
+        </header>
+        
+        <form id="form-cadastro">
+            <div class="form-section">
+                <h2>Dados do Morador</h2>
+                
+                <div class="form-group">
+                    <label for="nome-morador">Nome do Morador:</label>
+                    <input type="text" id="nome-morador" placeholder="Informe o nome completo do morador responsável" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="numero-salao">Número do Salão:</label>
+                    <select id="numero-salao" required>
+                        <option value="">Selecione o salão</option>
+                        <option value="Salão 1">Salão 1</option>
+                        <option value="Salão 2">Salão 2</option>
+                        <option value="Salão 3">Salão 3</option>
+                        <option value="Salão 4">Salão 4</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>Dados do Convidado</h2>
+                
+                <div class="form-group">
+                    <label for="nome-convidado">Nome Completo:</label>
+                    <input type="text" id="nome-convidado" placeholder="Informe o nome completo do convidado" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="rg-convidado">RG:</label>
+                    <input type="text" id="rg-convidado" placeholder="Informe o número do RG do convidado" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="data-evento">Data do Evento:</label>
+                    <input type="date" id="data-evento" required>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2>Dados do Veículo</h2>
+                
+                <div class="form-group">
+                    <label for="placa-veiculo">Placa do Veículo:</label>
+                    <input type="text" id="placa-veiculo" placeholder="Informe a placa do veículo">
+                </div>
+                
+                <div class="form-group">
+                    <label for="ano-veiculo">Ano do Veículo:</label>
+                    <input type="text" id="ano-veiculo" placeholder="Informe o ano do veículo">
+                </div>
+                
+                <div class="form-group">
+                    <label for="modelo-veiculo">Modelo do Veículo:</label>
+                    <input type="text" id="modelo-veiculo" placeholder="Informe o modelo do veículo">
+                </div>
+                
+                <div class="form-group">
+                    <label for="cor-veiculo">Cor do Veículo:</label>
+                    <input type="text" id="cor-veiculo" placeholder="Informe a cor do veículo">
+                </div>
+            </div>
+            
+            <div class="actions">
+                <button type="submit" id="btn-cadastrar">Cadastrar Convidado</button>
+            </div>
+        </form>
+        
+        <div id="registro-sucesso" class="mensagem-sucesso">
+            Convidado cadastrado com sucesso!
+        </div>
+        
+        <div id="lista-convidados">
+            <h2>Lista de Convidados Cadastrados</h2>
+            <div class="tabela-container">
+                <table id="tabela-convidados">
+                    <thead>
+                        <tr>
+                            <th>Morador</th>
+                            <th>Salão</th>
+                            <th>Convidado</th>
+                            <th>RG</th>
+                            <th>Data</th>
+                            <th>Veículo</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aqui serão inseridos os convidados cadastrados -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal de Detalhes do Convidado -->
+    <div id="modal-detalhes" class="modal">
+        <div class="modal-content">
+            <span class="fechar">&times;</span>
+            <h2>Detalhes do Convidado</h2>
+            <div id="detalhes-convidado">
+                <!-- Os detalhes serão inseridos aqui via JavaScript -->
+            </div>
+            <div class="modal-actions">
+                <button id="fechar-modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
