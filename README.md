@@ -1,6 +1,6 @@
 # cadastro-convidados
 
-Este é um aplicativo simples de cadastro de convidados, permitindo que você registre e visualize informações sobre os convidados para um evento ou ocasião especial.
+Este é um aplicativo simples de cadastro de convidados feito a pedido para um condomínio residencial, permitindo que você registre e visualize informações sobre os convidados para um evento ou ocasião especial.
 
 ## Funcionalidades
 
